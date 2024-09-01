@@ -59,4 +59,4 @@ jobs:
         run: |
           ssh -J ${{ secrets.SSH_BASTION_USER }}@${{ secrets.SSH_BASTION_HOST }}:10020 \
           -o StrictHostKeyChecking=no -i /tmp/new_id \
-          ${{ secrets.SSH_TARGET_USER }}@{{ secrets.SSH_TARGET_HOST }} "echo 개인 서버에 연결 성공"
+          ${{ secrets.SSH_TARGET_USER }}@${{ secrets.SSH_TARGET_HOST }} "echo 개인 서버에 연결 성공"
