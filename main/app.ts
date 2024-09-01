@@ -4,7 +4,7 @@ const server = Bun.serve({
     const path = new URL(req.url).pathname;
 
     if (path === "/") {
-      return new Response("Welcome to Yehwan App1!");
+      return new Response(Bun.file("static/index.html"));
     }
 
     return new Response("Not found", { status: 404 });
