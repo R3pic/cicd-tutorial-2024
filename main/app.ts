@@ -1,10 +1,10 @@
 const server = Bun.serve({
-  port: 3000,
+  port: 7000,
   async fetch(req) {
     const path = new URL(req.url).pathname;
 
     if (path === "/") {
-      return new Response("Welcome to Bun!");
+      return new Response("Welcome to Yehwan App1!");
     }
 
     return new Response("Not found", { status: 404 });
